@@ -1,0 +1,18 @@
+<h1> hello,This is todo_app page </h1>
+<!...<ul>
+     <li>temparory todo item A</li>
+     <li>temparory todo item B</li>
+</ul> --->
+
+<ul>
+     {% for todo_item in all_items%}
+     <li>{{ todo_item.content }}</li>
+     {% end for  %}
+
+</ul>
+
+<form action="/addTodo" method="post">
+     <input type="text" name="content"/>
+     <input type="submit" name="add"/>
+</form>
+
